@@ -7,11 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
+        registerButton.layer.borderWidth = 1
+        registerButton.layer.borderColor = UIColor(named: "AppCyan")?.cgColor
     }
 
 

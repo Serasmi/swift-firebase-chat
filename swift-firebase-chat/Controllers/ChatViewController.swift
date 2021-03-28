@@ -6,13 +6,24 @@
 //
 
 import UIKit
+import Firebase
 
-class CharViewController: UIViewController {
+class ChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign out", style: .plain, target: self, action: #selector(signOut))
+    }
+    
+    @objc func signOut() {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch {
+            self.showSimpleError(with: error.localizedDescription)
+        }
     }
     
 

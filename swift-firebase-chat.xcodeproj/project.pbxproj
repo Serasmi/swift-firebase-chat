@@ -16,8 +16,9 @@
 		ED43B2BA260A86A600F2EB99 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED43B2B9260A86A600F2EB99 /* GoogleService-Info.plist */; };
 		ED43B2D9260BAF5800F2EB99 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED43B2D8260BAF5800F2EB99 /* RegisterViewController.swift */; };
 		ED43B2DC260BAF6B00F2EB99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED43B2DB260BAF6B00F2EB99 /* LoginViewController.swift */; };
-		ED43B2DF260BAF7D00F2EB99 /* CharViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED43B2DE260BAF7D00F2EB99 /* CharViewController.swift */; };
+		ED43B2DF260BAF7D00F2EB99 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED43B2DE260BAF7D00F2EB99 /* ChatViewController.swift */; };
 		ED43B2E3260BC96900F2EB99 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED43B2E2260BC96900F2EB99 /* Colors.xcassets */; };
+		ED43B2EB2610D35800F2EB99 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED43B2EA2610D35800F2EB99 /* UIViewControllerExtension.swift */; };
 		ED4D72870175961FA49C34F7 /* Pods_swift_firebase_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231A8CE11599C84DB63100F3 /* Pods_swift_firebase_chat.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,8 +37,9 @@
 		ED43B2B9260A86A600F2EB99 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED43B2D8260BAF5800F2EB99 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		ED43B2DB260BAF6B00F2EB99 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		ED43B2DE260BAF7D00F2EB99 /* CharViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharViewController.swift; sourceTree = "<group>"; };
+		ED43B2DE260BAF7D00F2EB99 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ED43B2E2260BC96900F2EB99 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		ED43B2EA2610D35800F2EB99 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		ED43B2A2260A835100F2EB99 /* swift-firebase-chat */ = {
 			isa = PBXGroup;
 			children = (
+				ED43B2E92610D33E00F2EB99 /* Extensions */,
 				ED43B2D6260BAE0D00F2EB99 /* Controllers */,
 				ED43B2D5260BAE0200F2EB99 /* Views */,
 				ED43B2A3260A835100F2EB99 /* AppDelegate.swift */,
@@ -114,12 +117,20 @@
 		ED43B2D6260BAE0D00F2EB99 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED43B2DE260BAF7D00F2EB99 /* CharViewController.swift */,
+				ED43B2DE260BAF7D00F2EB99 /* ChatViewController.swift */,
 				ED43B2DB260BAF6B00F2EB99 /* LoginViewController.swift */,
 				ED43B2D8260BAF5800F2EB99 /* RegisterViewController.swift */,
 				ED43B2A7260A835100F2EB99 /* WelcomeViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ED43B2E92610D33E00F2EB99 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED43B2EA2610D35800F2EB99 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +253,8 @@
 				ED43B2A4260A835100F2EB99 /* AppDelegate.swift in Sources */,
 				ED43B2A6260A835100F2EB99 /* SceneDelegate.swift in Sources */,
 				ED43B2DC260BAF6B00F2EB99 /* LoginViewController.swift in Sources */,
-				ED43B2DF260BAF7D00F2EB99 /* CharViewController.swift in Sources */,
+				ED43B2EB2610D35800F2EB99 /* UIViewControllerExtension.swift in Sources */,
+				ED43B2DF260BAF7D00F2EB99 /* ChatViewController.swift in Sources */,
 				ED43B2D9260BAF5800F2EB99 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

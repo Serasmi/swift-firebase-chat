@@ -117,13 +117,15 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vn7-Yw-w6L">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
+                                        <color key="textColor" name="AppCyan"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rku-1z-Ps5">
                                         <rect key="frame" x="0.0" y="54" width="350" height="34"/>
+                                        <color key="textColor" name="AppCyan"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGt-wL-dxu">
                                         <rect key="frame" x="0.0" y="108" width="350" height="40"/>
@@ -134,6 +136,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="3t0-zP-0Wz" eventType="touchUpInside" id="A9p-0r-Lay"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -152,6 +157,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="kfq-El-KGy"/>
                     <connections>
+                        <outlet property="emailTextField" destination="vn7-Yw-w6L" id="Udo-Hg-PXL"/>
+                        <outlet property="passwordTextField" destination="rku-1z-Ps5" id="7h9-2r-bWh"/>
                         <segue destination="ZBV-3i-2dP" kind="show" identifier="RegisterToChat" id="8lV-Sz-fGl"/>
                     </connections>
                 </viewController>
@@ -172,13 +179,15 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUV-0E-Hai">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
+                                        <color key="textColor" name="AppCyan"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jj-uX-EZa">
                                         <rect key="frame" x="0.0" y="54" width="350" height="34"/>
+                                        <color key="textColor" name="AppCyan"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPZ-b6-AWC">
                                         <rect key="frame" x="0.0" y="108" width="350" height="40"/>
@@ -189,6 +198,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="lgE-D4-YBQ" eventType="touchUpInside" id="nsW-xx-W60"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -207,6 +219,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="xCH-SL-U4I"/>
                     <connections>
+                        <outlet property="emailTextField" destination="ZUV-0E-Hai" id="AkO-q1-6g5"/>
+                        <outlet property="passwordTextField" destination="7jj-uX-EZa" id="lPq-39-pbZ"/>
                         <segue destination="ZBV-3i-2dP" kind="show" identifier="LoginToChat" id="Oby-Nj-M0e"/>
                     </connections>
                 </viewController>
@@ -214,17 +228,17 @@
             </objects>
             <point key="canvasLocation" x="1502" y="483"/>
         </scene>
-        <!--Char View Controller-->
+        <!--Chat it-->
         <scene sceneID="wij-YZ-dgY">
             <objects>
-                <viewController id="ZBV-3i-2dP" customClass="CharViewController" customModule="swift_firebase_chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZBV-3i-2dP" customClass="ChatViewController" customModule="swift_firebase_chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8vU-50-9Cy">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="f7R-uP-A4L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BGm-Jt-oGh"/>
+                    <navigationItem key="navigationItem" title="Chat it" id="BGm-Jt-oGh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1j-Ae-pBx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,7 +251,7 @@
     <resources>
         <image name="chat-logo" width="659" height="684"/>
         <namedColor name="AppCyan">
-            <color red="0.033806364980000003" green="0.78897070879999998" blue="0.95689421890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.034000001847743988" green="0.78899997472763062" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
